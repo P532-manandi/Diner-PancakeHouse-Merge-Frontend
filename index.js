@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
       password: document.getElementById("suPassword").value,
     };
 
-    fetch("http://localhost:8080/auth/signup", {
+    fetch("https://menu-house.onrender.com/auth/signup", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function fetchMenu(path) {
     menuList.innerHTML = `<p>Loading…</p>`;
-    fetch(`http://localhost:8080${path}`)
+    fetch(`https://menu-house.onrender.com${path}`)
       .then((r) => r.json())
       .then((data) => {
         if (!Array.isArray(data)) data = [data];
