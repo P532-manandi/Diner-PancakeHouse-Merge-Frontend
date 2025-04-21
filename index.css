@@ -1,0 +1,185 @@
+:root {
+  --clr-bg: #f5f5f5;
+  --clr-panel: #fff;
+  --clr-primary: #35a173;
+  --clr-github: #333;
+  --clr-google: #de5246;
+  --clr-text: #333;
+  --radius: 8px;
+  --spacing: 1rem;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  font-family: "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: var(--clr-bg);
+  color: var(--clr-text);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing);
+}
+.container {
+  width: 100%;
+  max-width: 480px;
+}
+
+/* PANELS */
+.login-panel,
+.menu-panel {
+  background: var(--clr-panel);
+  padding: var(--spacing);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-bottom: var(--spacing);
+}
+
+/* LOGIN PANEL */
+.login-panel h1 {
+  font-size: 1.25rem;
+  text-align: center;
+  margin-bottom: var(--spacing);
+}
+.login-box {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing);
+}
+.social-login {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.divider {
+  position: relative;
+  width: 1px;
+  background: #ddd;
+  height: 100%;
+}
+.divider span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--clr-panel);
+  padding: 0 0.5rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+.manual-login {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.manual-login input {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  font-size: 1rem;
+}
+
+/* SIGNUP FORM */
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: var(--spacing);
+}
+.signup-form input {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  font-size: 1rem;
+}
+.signup-message {
+  font-size: 0.9rem;
+  min-height: 1.2em;
+}
+.hidden {
+  display: none;
+}
+
+/* BUTTONS */
+.btn {
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.75rem;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+}
+.btn-github {
+  background: var(--clr-github);
+  color: #fff;
+}
+.btn-google {
+  background: var(--clr-google);
+  color: #fff;
+}
+.btn-login {
+  background: var(--clr-primary);
+  color: #fff;
+}
+
+/* LINKS */
+.help-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--spacing);
+}
+.help-links a {
+  color: var(--clr-text);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.help-links a:hover {
+  text-decoration: underline;
+}
+
+/* MENU PANEL */
+.menu-panel h2 {
+  text-align: center;
+  margin-bottom: var(--spacing);
+}
+.menu-nav {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: var(--spacing);
+}
+.menu-nav button {
+  background: none;
+  border: 1px solid var(--clr-primary);
+  color: var(--clr-primary);
+  border-radius: var(--radius);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+.menu-nav button:hover {
+  background: var(--clr-primary);
+  color: #fff;
+}
+.menu-list .item {
+  border-bottom: 1px solid #eee;
+  padding: 0.75rem 0;
+}
+.menu-list .item:last-child {
+  border: none;
+}
+.menu-list .item h3 {
+  margin-bottom: 0.25rem;
+}
+.menu-list .item p {
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+.menu-list .item .price {
+  font-weight: bold;
+}
